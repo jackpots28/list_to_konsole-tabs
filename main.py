@@ -15,16 +15,19 @@ default_batch_size = 6
 # print(list(src_path.glob("**/*")))
 
 if __name__ == "__main__":
-    file_dict = file_handler.file_to_dict(src_file)
+    file_obj = file_handler.FileHandler
+    file_dict = file_obj.file_to_dict(src_file)
     
     print(file_dict.values())
     print(len(file_dict))
 
     default_batch_size = len(file_dict)
 
-    file_dict = {x: file_handler.text_formatter(file_dict[x]) for x in file_dict}
+    file_dict = {host: file_obj.text_formatter(file_dict[host]) for host in file_dict}
 
     for item in file_dict.values():
-        file_handler.insert_into_file(des_file, item)
+        file_obj.insert_into_file(des_file, item)
 
     print(file_dict)
+    # TODO: need to check this prior to appending to file so that it can be incremented 
+    # print(file_handler.check_if_file(des_file))
