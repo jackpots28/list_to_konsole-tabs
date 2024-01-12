@@ -1,0 +1,22 @@
+#parser = argparse.ArgumentParser(description="Splits single newline seperated host \
+#                                                                file into Konsole tab batches",
+#                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+#parser.add_argument("src", help="fully quilified path to host list - /path/to/list")
+#parser.add_argument("dest", help="fully quilified path to output dir - /path/to/output_dir")
+#parser.add_argument("-b", "--batch", help="set number of hosts per batch - default is 6")
+#parser.add_argument("-n", "--name", help="set name of batches - default is batch#")
+
+#passed_args = vars(parser.parse_args())
+
+
+src_path = "/home/simsjo-a/server.list" #passed_args["/home/simsjo-a/server.list"]
+dest_path = "/home/simsjo-a/tabs" #passed_args["/home/simsjo-a/tabs"]
+size = 6 #passed_args["batch"]
+output_name = "batch0" #str(passed_args["name"])
+
+if not (os.path.exists(src_path)) or not (os.path.exists(dest_path)):
+        print("Source or Destination not reachable")
+        sys.exit()
+
+server_list = str(src_path)
+output_file = str(dest_path)

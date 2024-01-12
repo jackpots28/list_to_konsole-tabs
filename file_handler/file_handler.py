@@ -19,7 +19,7 @@ class FileHandler():
         with open(file_path, "a") as file:
             file.write(insert_text)
 
-    def text_formatter(insert_text: str)->str:
+    def text_transform(insert_text: str)->str:
         return f"title: {insert_text};; command: ssh {insert_text}\n"
 
     # def get_subdirs(file_path: Path):
