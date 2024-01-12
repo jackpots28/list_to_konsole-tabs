@@ -23,11 +23,12 @@ if __name__ == "__main__":
 
     default_batch_size = len(file_dict)
 
-    file_dict = {host: file_obj.text_transform(file_dict[host]) for host in file_dict}
+    file_dict = {host: file_obj.text_transform(file_dict[host], "ssh") for host in file_dict}
 
     for item in file_dict.values():
         file_obj.insert_into_file(des_file, item)
 
-    print(file_dict)
+    for item in file_dict.items():
+        print(item)
     # TODO: need to check this prior to appending to file so that it can be incremented 
     # print(file_handler.check_if_file(des_file))
