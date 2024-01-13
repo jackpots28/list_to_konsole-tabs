@@ -16,7 +16,6 @@ setup(
         'Development Status :: 1 - Planning',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: BSD License',  
-        'Operating System :: POSIX :: Linux',        
-        'Programming Language :: Python :: 3.8.x',
+        'Operating System :: POSIX :: Linux',
     ],
 )
