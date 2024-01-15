@@ -13,7 +13,12 @@ default_batch_size = 6
 
 # print(list(src_path.glob("**/*")))
 
+class list_to_tabs:
+    #TODO: move main into this class so that on import of module, class can be called in running script
+    pass
+
 if __name__ == "__main__":
+    tabsObj = list_to_tabs()
 
     file_obj = file_handler.FileHandler
     file_dict = file_obj.file_to_dict(src_file)

@@ -3,7 +3,7 @@ from dataclasses import dataclass
 import tempfile
 
 class FileHandler():
-    def __init__():
+    def __init__(self):
         pass
 
     def file_to_dict(file_path: Path)->dict():
@@ -14,7 +14,7 @@ class FileHandler():
         return temp_dict
     
     def create_new_file(file_path: Path)->Path:
-        if (not file_path.exists and not file_path.is_dir()):
+        if not file_path.exists and not file_path.is_dir():
             open(file_path, 'a')
         else:
             pass
