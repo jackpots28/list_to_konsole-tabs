@@ -60,8 +60,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -86,7 +84,7 @@ To get a local copy up and running follow these simple example steps.
 This is an example of how to list things you need to use the software and how to install them.
 * pypi
   ```sh
-  python3 -m pip install list_to_konsole-tabs
+  python3 -m pip install list-to-tabs
   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: list-to-tabs
-Version: 1.0.0
+Version: 1.0.1
 Summary: A python package for converting newline files into konsole-tabs
 Home-page: 
 Author: Jack Sims
@@ -77,8 +77,6 @@ Requires-Dist: wheel
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -103,7 +101,7 @@ To get a local copy up and running follow these simple example steps.
 This is an example of how to list things you need to use the software and how to install them.
 * pypi
   ```sh
-  python3 -m pip install list_to_konsole-tabs
+  python3 -m pip install list-to-tabs
   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
