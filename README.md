@@ -69,7 +69,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* ![Python]({https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue})
+* ![Python][python-badge]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -99,7 +99,7 @@ This is an example of how to list things you need to use the software and how to
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation]()_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -177,3 +177,4 @@ Project Link: [https://github.com/jackpots28/list_to_konsole-tabs](https://githu
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
+[python-badge]: https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue
