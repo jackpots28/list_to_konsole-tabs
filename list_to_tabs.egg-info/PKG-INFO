@@ -7,7 +7,7 @@ Author: Jack Sims
 Author-email: jack.m.sims@protonmail.com
 License: BSD 2-clause
 Classifier: Development Status :: 1 - Planning
-Classifier: Intended Audience :: Utility/Administrators
+Classifier: Intended Audience :: Developers
 Classifier: License :: OSI Approved :: BSD License
 Classifier: Operating System :: POSIX :: Linux
 Requires-Dist: argparse

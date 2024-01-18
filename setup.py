@@ -16,7 +16,7 @@ setup(
     ],
     classifiers=[
         "Development Status :: 1 - Planning",
-        "Intended Audience :: Utility/Administrators",
+        "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Operating System :: POSIX :: Linux",
     ],
