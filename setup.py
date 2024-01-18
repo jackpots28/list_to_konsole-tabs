@@ -4,6 +4,8 @@ setup(
     name="list_to_tabs",
     version="0.1.1",
     description="A python package for converting newline files into konsole-tabs",
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     url="",
     author="Jack Sims",
     author_email="jack.m.sims@protonmail.com",
