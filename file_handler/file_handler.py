@@ -1,7 +1,5 @@
 from pathlib import Path
 from dataclasses import dataclass
-import tempfile
-
 
 class FileHandler:
     def __init__(self):
