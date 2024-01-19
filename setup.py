@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="list_to_tabs",
+    name="list-to-tabs",
     version='{{VERSION_VAR}}',
     description="A python package for converting newline files into konsole-tabs",
     long_description=open('README.md').read(),

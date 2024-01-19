@@ -82,6 +82,10 @@
 This is an example of how to list things you need to use the software and how to install them.
 * pypi
   ```sh
+  pip3 install list-to-tabs
+  
+  or
+  
   python3 -m pip install list-to-tabs
   ```
 
@@ -91,25 +95,29 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+```sh
+Run "list-to-tabs" from the cli with option "-h" for Help
 
+or 
+
+Run "list-to-tabs" without and arguments to see narrow usage:
+
+usage: list_to_tabs [-h] [-b BATCH] [-n NAME] src dest
+list_to_tabs: error: the following arguments are required: src, dest
+```
 _For more examples, please refer to the [Documentation]()_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1 - NA
-- [ ] Feature 2 - NA
-- [ ] Feature 3 - NA
+- [ ] Feature 1 - Printing and selecting source files base on a supplied directory
+- [ ] Feature 2 - Insertion of different command structures inplace of typical "ssh"
 
 See the [open issues](https://github.com/jackpots28/list_to_konsole-tabs/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
