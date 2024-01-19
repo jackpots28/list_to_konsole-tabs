@@ -24,7 +24,7 @@ def main():
     parser.add_argument("src", help="fully qualified path to host list - /path/to/list")
     parser.add_argument("dest", help="fully qualified path to output dir - /path/to/output_dir")
     parser.add_argument("-b", "--batch", help="set number of hosts per batch - default is 6")
-    parser.add_argument("-n", "--name", help="set name of batches - default is batch#")
+    parser.add_argument("-n", "--name", default="batch", help="set name of batches - default is batch")
 
     passed_args = vars(parser.parse_args())
 
@@ -39,7 +39,7 @@ def main():
         sys.exit()
 
     server_list = str(src_path)
-    output_file = str(dest_path)
+    output_file = f"{dest_path}/{output_name}"
 
     file_obj = file_handler.FileHandler
     file_dict = file_obj.file_to_dict(Path(server_list))
