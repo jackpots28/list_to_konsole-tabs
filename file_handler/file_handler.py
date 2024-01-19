@@ -18,7 +18,7 @@ class FileHandler:
         else:
             pass
         return Path(
-            "/home/simsjo-a/"
+            "/home/simsjo/"
         )  # TODO: make this into a recursive function so that if filename exists, subfix w/ num
 
     def insert_into_file(self: Path, insert_text: str):

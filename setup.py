@@ -22,4 +22,8 @@ setup(
         "License :: OSI Approved :: GNU General Public License (GPL)",
         "Operating System :: POSIX :: Linux",
     ],
+    entry_points={
+        'console_scripts': ['list_to_tabs=list_to_tabs.main:main'],
+    },
 )
+print(find_packages())
