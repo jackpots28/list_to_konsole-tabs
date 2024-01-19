@@ -23,7 +23,7 @@ setup(
         "Operating System :: POSIX :: Linux",
     ],
     entry_points={
-        'console_scripts': ['list_to_tabs=list_to_tabs.main:main'],
+        'console_scripts': ['list-to-tabs=list_to_tabs.main:main'],
     },
 )
 print(find_packages())
