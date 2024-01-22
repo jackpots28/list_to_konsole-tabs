@@ -20,5 +20,5 @@ jobs:
         pip install ruff
     - name: Analysing the code with pylint
       run: |
-        ruff check .
-        ruff fix .
+        ruff check ./*
+        ruff fix ./*
