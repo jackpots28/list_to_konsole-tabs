@@ -1,9 +1,10 @@
 <a name="readme-top"></a>
 
 
-[![Issues][issues-shield]](https://github.com/jackpots28/list_to_konsole-tabs/issues)
-[![MIT License][license-shield]](https://github.com/jackpots28/list_to_konsole-tabs/blob/main/LICENSE)
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/jack-john-sims)
+![GitHub issues](https://img.shields.io/github/issues/jackpots28/list_to_konsole-tabs)
+[![GPL License][license-shield]](https://github.com/jackpots28/list_to_konsole-tabs/blob/main/LICENSE)
+[![General badge](https://img.shields.io/badge/LinkedIn-Jack_Sims-blue.svg)](https://www.linkedin.com/in/jack-john-sims)
+
 
 
 
@@ -64,8 +65,7 @@
 
 
 ### Built With
-
-* [![Python][python-badge]](https://www.python.org/)
+[![Python][python-badge]](https://www.python.org/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -128,7 +128,7 @@ Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Com your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
@@ -140,6 +140,8 @@ Don't forget to give the project a star! Thanks again!
 ## License
 
 Distributed under the GPL License
+
+[![GPL License][license-shield]](https://github.com/jackpots28/list_to_konsole-tabs/blob/main/LICENSE)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -156,8 +158,7 @@ Project Link: [https://github.com/jackpots28/list_to_konsole-tabs](https://githu
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-* [Myself - Jack]()
+ [![General badge](https://img.shields.io/badge/Github-jackpots28-green.svg)](https://github.com/jackpots28)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -171,10 +172,10 @@ Project Link: [https://github.com/jackpots28/list_to_konsole-tabs](https://githu
 [forks-url]: https://github.com/github_username/repo_name/network/members
 [stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
 [stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/jackpots28/list_to_konsole
+[issues-url]: https://github.com/jackpots28/list_to_konsole-tabs/issues
+[license-shield]: https://img.shields.io/badge/License-GPLv3-blue.svg
 [license-url]: https://github.com/jackpots28/list_to_konsole-tabs/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [python-badge]: https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue
