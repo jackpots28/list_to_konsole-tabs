@@ -22,7 +22,8 @@ exclude = [
 ]
 
 extend-exclude = [
-    "*.md"
+    "*.md",
+    "LICENSE"
 ]
 
 [tool.ruff.per-file-ignores]
