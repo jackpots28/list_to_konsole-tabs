@@ -2,10 +2,11 @@ from setuptools import setup, find_packages
 
 setup(
     name="list-to-tabs",
-    version='{{VERSION_VAR}}',
+    version="{{VERSION_VAR}}",
+    # version="2.0.0",
     description="A python package for converting newline files into konsole-tabs",
-    long_description=open('README.md').read(),
-    long_description_content_type='text/markdown',
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
     url="",
     author="Jack Sims",
     author_email="jack.m.sims@protonmail.com",
@@ -23,7 +24,7 @@ setup(
         "Operating System :: POSIX :: Linux",
     ],
     entry_points={
-        'console_scripts': ['list-to-tabs=list_to_tabs.main:main'],
+        "console_scripts": ["list-to-tabs=src.main:main"],
     },
 )
 print(find_packages())
