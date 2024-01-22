@@ -2,7 +2,7 @@
 
 
 [![Issues][issues-shield]](https://github.com/jackpots28/list_to_konsole-tabs/issues)
-[![MIT License][license-shield]](n/a)
+[![MIT License][license-shield]](https://github.com/jackpots28/list_to_konsole-tabs/blob/main/LICENSE)
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/jack-john-sims)
 
 
@@ -174,7 +174,7 @@ Project Link: [https://github.com/jackpots28/list_to_konsole-tabs](https://githu
 [issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
 [issues-url]: https://github.com/github_username/repo_name/issues
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[license-url]: https://github.com/jackpots28/list_to_konsole-tabs/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [python-badge]: https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue
