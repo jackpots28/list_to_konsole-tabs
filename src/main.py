@@ -28,7 +28,7 @@ def main():
     src_file_path = Path(passed_args["src"])
     dest_dir_path = Path(passed_args["dest"])
     output_name = str(passed_args["name"])
-    batch_size = int(passed_args["batch"])
+    # batch_size = int(passed_args["batch"])
 
 
     # TODO: refactor this to utilize "Path" from pathlib
@@ -39,8 +39,8 @@ def main():
     file_obj = file_handler_class()
     file_dict = file_obj.file_to_dict(src_file_path)
 
+    # TODO: this prints will need to be removed
     print(file_dict.values())
-    print(len(file_dict))
 
     file_dict = {
         host: file_obj.text_transform(file_dict[host], "ssh") for host in file_dict
