@@ -30,19 +30,14 @@ def main():
     output_name = str(passed_args["name"])
     batch_size = int(passed_args["batch"])
 
-    # TESTING
-    # src_file_path = Path("/home/simsjo/server.list")
-    # dest_dir_path = Path("/home/simsjo")
-    # output_name = str("batch")
-    # batch_size = int(6)
 
     # TODO: refactor this to utilize "Path" from pathlib
     if not (src_file_path.is_file()) or not (dest_dir_path.is_dir()):
         print("Source or Destination not reachable")
         sys.exit()
 
-    file_obj = file_handler_class(src_file_path, dest_dir_path, output_name, batch_size)
-    file_dict = file_obj.file_to_dict()
+    file_obj = file_handler_class()
+    file_dict = file_obj.file_to_dict(src_file_path)
 
     print(file_dict.values())
     print(len(file_dict))
@@ -52,7 +47,7 @@ def main():
     }
 
     for item in file_dict.values():
-        file_obj.insert_into_file(item)
+        file_obj.insert_into_file(dest_dir_path, output_name, item)
 
     for item in file_dict.items():
         print(item)

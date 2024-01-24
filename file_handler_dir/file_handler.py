@@ -2,35 +2,32 @@ from pathlib import Path
 
 
 class file_handler_class:
-    def __init__(
-        self, src_file: Path, dest_dir: Path, output_file_name: str, batch_size: int
-    ):
-        self.i_src_file = src_file
-        self.i_dest_dir = dest_dir
-        self.i_output_file_name = output_file_name
-        self.i_batch_size = batch_size
 
-    def file_to_dict(self) -> dict:
+    @staticmethod
+    def file_to_dict(input_file: Path) -> dict:
         temp_dict = dict()
-        with open(self.i_src_file, "r") as file:
+        with open(input_file, "r") as file:
             for line_num, line_content in enumerate(file):
                 temp_dict[line_num] = str(line_content).strip()
         return temp_dict
 
-    def create_new_file(self) -> Path:
-        if not self.i_src_file.exists() and not self.i_dest_dir.is_dir():
-            open(self.i_src_file, "a")
+    @staticmethod
+    def create_new_file(input_file: Path, dest_dir: Path) -> Path:
+        if not input_file.exists() and not dest_dir.is_dir():
+            open(input_file, "a")
         else:
             pass
         return Path(
-            "/home/simsjo/"
+            ""
         )  # TODO: make this into a recursive function so that if filename exists, subfix w/ num
 
-    def insert_into_file(self, insert_text: str):
-        with open(f"{self.i_dest_dir}/{self.i_output_file_name}", "a") as file:
+    @staticmethod
+    def insert_into_file(dest_dir: Path, output_file: str, insert_text: str):
+        with open(f"{dest_dir}/{output_file}", "a") as file:
             file.write(insert_text)
 
-    def text_transform(self, insert_host: str, insert_command: str) -> str:
+    @staticmethod
+    def text_transform(insert_host: str, insert_command: str) -> str:
         return f"title: {insert_host};; command: {insert_command} {insert_host}\n"
 
     # def get_subdirs(file_path: Path):
