@@ -18,7 +18,7 @@ jobs:
         python-version: '3.x'
     - name: Show it all
       run: |
-        echo ${GITHUB_CONTEXT}
+        echo ${{ github.event.release.tag_name }}
     - name: Extract Tagging
       id: tag
       run: |
