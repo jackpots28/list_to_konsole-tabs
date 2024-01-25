@@ -1,37 +1,62 @@
 #!/usr/bin/python3
 
 import argparse
+import pathlib
 import sys
-from pathlib import Path
+import pkg_resources
 from file_handler_dir.file_handler import file_handler_class
 
 
 def main():
+
+    # Dynamically get version from setup
+    __version__ = pkg_resources.require("list-to-tabs")[0].version
+
+
     parser = argparse.ArgumentParser(
         description="Splits single newline seperated host "
         "file into Konsole tab batches",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
-    parser.add_argument("src", help="fully qualified path to host list - /path/to/list")
+
     parser.add_argument(
-        "dest", help="fully qualified path to output dir - /path/to/output_dir"
+        "-v", "--version",
+        help="get current package version",
+        action='version',
+        version='%(prog)s ' + __version__
     )
     parser.add_argument(
-        "-b", "--batch", default=6, help="set number of hosts per batch - default is 6"
+        "src",
+        help="fully qualified path to host list - /path/to/list",
+        type=pathlib.Path
     )
     parser.add_argument(
-        "-n", "--name", default="batch", help="set name of batches - default is batch"
+        "dest",
+        help="fully qualified path to output dir - /path/to/output_dir",
+        type=pathlib.Path
+    )
+    parser.add_argument(
+        "-b", "--batch",
+        default=(sys.maxsize / 2),
+        help="set number of hosts per batch - default is entire file",
+        type=int
+    )
+    parser.add_argument(
+        "-n", "--name",
+        default="batch",
+        help="set name of batches - default is batch",
+        type=str
     )
 
     passed_args = vars(parser.parse_args())
 
-    src_file_path = Path(passed_args["src"])
-    dest_dir_path = Path(passed_args["dest"])
-    output_name = str(passed_args["name"])
-    batch_size = int(passed_args["batch"])
+    src_file_path = passed_args["src"]
+    dest_dir_path = passed_args["dest"]
+    output_name = passed_args["name"]
 
+    # Currently unimplemented
+    # batch_size = passed_args["batch"]
 
-    # TODO: refactor this to utilize "Path" from pathlib
     if not (src_file_path.is_file()) or not (dest_dir_path.is_dir()):
         print("Source or Destination not reachable")
         sys.exit()
@@ -39,8 +64,8 @@ def main():
     file_obj = file_handler_class()
     file_dict = file_obj.file_to_dict(src_file_path)
 
+    # TODO: this prints will need to be removed
     print(file_dict.values())
-    print(len(file_dict))
 
     file_dict = {
         host: file_obj.text_transform(file_dict[host], "ssh") for host in file_dict
