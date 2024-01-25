@@ -27,4 +27,4 @@ jobs:
         
     - name: Update Version in setup.py
       run: >-
-        sed "s/{{VERSION_VAR}}/${{ env>RELEASE_VERSION }}/g" setup.py
+        sed "s/{{VERSION_VAR}}/${{ env.RELEASE_VERSION }}/g" setup.py
