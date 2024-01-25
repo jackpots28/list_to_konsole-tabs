@@ -1,0 +1,26 @@
+name: Manual workflow testing
+
+on: workflow_call
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Extract Tagging
+      id: tag
+      run: echo "tag={{ github.ref_name }}" >> $GITHUB_OUTPUT
+    - name: show tagging
+      env:
+        RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
+      run: |
+        echo $RELEASE_VERSION
+        echo ${{ steps.vars.outputs.tag }}
+        
+    - name: Update Version in setup.py
+      run: >-
+        sed "s/{{VERSION_VAR}}/${{ steps.tag.outputs.TAG_NAME }}/g" setup.py
