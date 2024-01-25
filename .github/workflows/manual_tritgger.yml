@@ -11,9 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
     - name: Extract Tagging
       id: tag
-      run: echo "tag={{ github.ref_name }}" >> $GITHUB_OUTPUT
+      run: |
+        echo ${{github.ref_name}}
+        echo "tag=${{github.ref_name}}" >> $GITHUB_OUTPUT
+        echo ${{github.event.release.tag_name}}
     - name: show tagging
       env:
         RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
