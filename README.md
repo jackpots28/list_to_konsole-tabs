@@ -94,15 +94,28 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-```sh
+```
+
 Run "list-to-tabs" from the cli with option "-h" for Help
 
 or 
 
-Run "list-to-tabs" without and arguments to see narrow usage:
+Run "list-to-tabs" without any arguments to see narrow usage:
 
-usage: list_to_tabs [-h] [-b BATCH] [-n NAME] src dest
-list_to_tabs: error: the following arguments are required: src, dest
+usage: list-to-tabs [-h] [-v] [-b BATCH] [-n NAME] src dest
+list-to-tabs: error: the following arguments are required: src, dest
+
+---
+
+Example:
+
+Run against single "server.list" file from "/home/" direcotry and name the output file "batch_file"
+.) list-to-tabs /home/your_home/server.list /tmp -n batch_file
+
+Run against multiple "hostfile" lists and output multiple "batch" file subfixed with the original file name
+.) ls -lart /path/to/hostfile*.list | awk '{print $9}' | xargs -I{} list-to-tabs ./{} ./ -n batch_{}
+
+
 ```
 _For more examples, please refer to the [Documentation]()_
 
