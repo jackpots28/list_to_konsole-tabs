@@ -12,6 +12,12 @@ class file_handler_class:
         return temp_dict
 
     @staticmethod
+    def cmdln_input_to_dict() -> dict:
+        print("Please enter newline seperated list of hosts (Use a blank newline to terminate):")
+        containing_dict = {i: input_text for i, input_text in enumerate(iter(input, ''), start=0)}
+        return containing_dict
+
+    @staticmethod
     def create_new_file(input_file: Path, dest_dir: Path) -> Path:
         if not input_file.exists() and not dest_dir.is_dir():
             open(input_file, "a")

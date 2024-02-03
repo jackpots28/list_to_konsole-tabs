@@ -48,6 +48,15 @@ def main():
         type=str
     )
 
+    parser.add_argument(
+        "-x", "--xmode",
+        help="-x / --xmode cannot be used with any other options"
+             "\nIn xmode, list-to-tabs will prompt for newline entries "
+             "to be typed directory onto cmdln (Until blank newline is "
+             "processed which will terminate the loop and print on exit)",
+        type=str
+    )
+
     passed_args = vars(parser.parse_args())
 
     src_file_path = passed_args["src"]
