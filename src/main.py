@@ -5,6 +5,7 @@ import pathlib
 import sys
 import pkg_resources
 from file_handler_dir.file_handler import file_handler_class
+from raw_cmdln_entry.cmdln_entry import raw_cmdln_entry_Class
 
 
 def main():
@@ -19,47 +20,66 @@ def main():
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
 
-    parser.add_argument(
+    base_group = parser.add_argument_group("Base options", "Regularly accepted arguments")
+
+    exclusive_group = parser.add_mutually_exclusive_group(required=False)
+    # Not implemented fully
+    exclusive_group.add_argument(
+        "-x", "--xmode",
+        help="-x / --xmode cannot be used with any other options"
+             "\nIn xmode, list-to-tabs will prompt for newline entries "
+             "to be typed directory onto cmdln (Until blank newline is "
+             "processed which will terminate the loop and print on exit)"
+    )
+
+    base_group.add_argument(
         "-v", "--version",
         help="get current package version",
         action='version',
         version='%(prog)s ' + __version__
     )
-    parser.add_argument(
-        "src",
+    exclusive_group.add_argument(
+        "-s", "--source",
         help="fully qualified path to host list - /path/to/list",
         type=pathlib.Path
     )
-    parser.add_argument(
-        "dest",
-        help="fully qualified path to output dir - /path/to/output_dir",
-        type=pathlib.Path
+    base_group.add_argument(
+        "-d", "--dest",
+        help="fully qualified path to output dir - /path/to/output_dir (Default is CWD)",
+        type=pathlib.Path,
+        default=pathlib.Path().absolute(),
+        required=False
     )
-    parser.add_argument(
+    base_group.add_argument(
         "-b", "--batch",
         default=(sys.maxsize / 2),
         help="set number of hosts per batch - default is entire file",
         type=int
     )
-    parser.add_argument(
+    base_group.add_argument(
         "-n", "--name",
-        default="batch",
-        help="set name of batches - default is batch",
+        default="output_batch",
+        help="set name of batches - default name is output_batch",
+        type=str
+    )
+    base_group.add_argument(
+        "-c", "--command",
+        default="ssh",
+        help="Set the command to enter into tabs file - default is ssh <host>",
         type=str
     )
 
-    parser.add_argument(
-        "-x", "--xmode",
-        help="-x / --xmode cannot be used with any other options"
-             "\nIn xmode, list-to-tabs will prompt for newline entries "
-             "to be typed directory onto cmdln (Until blank newline is "
-             "processed which will terminate the loop and print on exit)",
-        type=str
-    )
+
+
 
     passed_args = vars(parser.parse_args())
+    test_parse = parser.parse_known_args()
+    print(passed_args.items())
+    print(test_parse)
 
-    src_file_path = passed_args["src"]
+    sys.exit()
+
+    src_file_path = passed_args["source"]
     dest_dir_path = passed_args["dest"]
     output_name = passed_args["name"]
 

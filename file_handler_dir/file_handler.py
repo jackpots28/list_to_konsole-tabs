@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-class file_handler_class:
+class file_handler_class(object):
 
     @staticmethod
     def file_to_dict(input_file: Path) -> dict:
@@ -11,6 +11,7 @@ class file_handler_class:
                 temp_dict[line_num] = str(line_content).strip()
         return temp_dict
 
+    # Working as intended
     @staticmethod
     def cmdln_input_to_dict() -> dict:
         print("Please enter newline seperated list of hosts (Use a blank newline to terminate):")
